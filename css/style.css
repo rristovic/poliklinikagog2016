@@ -12,11 +12,16 @@ h2{
 	color: #003399;
 }
 
+*{
+	box-sizing: border-box;
+}
+
 p{
 	text-align: left;
-	line-height: 30px;
+	line-height: 40px;
 	font-size: 20px;
 }
+
 
 .service {
 	margin-left: 15%;
@@ -37,12 +42,11 @@ p{
     }
 }
 
-*{
-	background-size: 100%;
-}
+
 
 .col-md-6{
 	text-align: center;
+	margin: auto;
 }
 
 .btn{
@@ -59,3 +63,42 @@ p{
     cursor: pointer;
 }
 
+#row-vesti, .container, .row{
+	margin: auto;
+}
+
+#row-vesti{
+	width: 2000px;
+	padding-right: 50px;
+}
+
+#info-RVreme{
+	position: relative;
+	top: 20px;
+	right: 285px;
+}
+
+#info{
+	position: relative;
+	top:60px;
+	right: 500px;
+}
+
+.info{
+	font-size: 16px;
+}
+
+#GOG{
+	position: relative;
+	bottom: 55px;
+	left: 75px;
+}
+
+#logo-GOG{
+	position: relative;
+	top: 10px;
+}
+.navbar{
+	position: relative;
+	top: 10px;
+}
