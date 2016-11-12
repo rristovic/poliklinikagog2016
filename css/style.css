@@ -7,5 +7,26 @@ h1{
 	font-family: Arial;
 }
 
-	text-align: center;
+#h1-GOG{
+	font-family: Georgia;
+	font-weight: bold;
 }
+
+
+.service {
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: center;
+	/*border: 0.5px solid lightgrey;
+    border-radius: 5px;
+	padding: 5px;*/
+}
+
+.service_p {
+	text-align: justify;
+}
+
+@media (max-width: 978px) {
+    .service {
+      margin-top: 4%;
+    }
