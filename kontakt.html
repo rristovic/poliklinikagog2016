@@ -9,9 +9,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
   </head>
 
   <body onload="setTestQuestion()">
+
   	<div class="container header">
   		<div class="row">
           	<div class="col-md-3">
@@ -78,6 +81,8 @@
                 <label class="sr-only" for="text">Dokazite da niste robot</label>
                 <input type="number" class="form-control" id="test" placeholder="*" required="Obavezno polje"/>
               </div>
+
+              <p>Date: <input type="text" id="date" size="8"></p>
               <button type="button" onclick="submitClicked()" class="btn btn-default">Posalji</button>
             </form>
           </div>
@@ -95,6 +100,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
