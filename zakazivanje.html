@@ -17,10 +17,10 @@
   		<div class="row">
           	<div class="col-md-3">
 	  			<a href="index.html" id="a-GOG">
-	  				<h1 id="GOG-osoblje">poliklinika<span id="h1-GOG">GOG</span>.com</h1>
+	  				<h1>poliklinika<span id="h1-GOG">GOG</span>.com</h1>
 	  			</a>
   			</div>
-        
+  			
   		</div>
   	</div>
 
@@ -48,29 +48,16 @@
     </nav>
 
     <div class="container">
-	    <div class="row">
-		 	<div class="col-md-6" id="O-nama">
-		 		<h2>O nama</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
-        <h2 id="Zaposleni-GOG">Zaposleni:</h2>
-        <div id="zaposleni">
-          <ui class="zaposleni">
-          <li <a href="#"></a><img src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"></li>
-           <p>Email: Lorem ipsum</p>
-           <li <a href="#"></a><img src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"></li>
-          <p>Email: Lorem ipsum</p>
-          <li <a href="#"></a><img src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"></li>
-          <p>Email: Lorem ipsum</p>
-          <li <a href="#"></a><img src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"></li>
-          <p>Email: Lorem ipsum</p>
-          <li <a href="#"></a><img src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"></li>
-          <p>Email: Lorem ipsum</p>
-        </ui>
-        </div>
-		 	</div>
-		</div> 
-	</div>
-
+      <div class="row">
+        <div class="col-md-3">
+    <h1>Naša lokacija</h1>
+    <div id="map" style="width:600px;height:400px;background: blue"></div>
+      </div>
+      
+      <div class="col-md-9">
+      <p>Radno vreme</p>
+      </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -84,5 +71,19 @@
     	aGog.onmouseover = function(){document.getElementById('h1-GOG').style.color = gogNewColor}
     	aGog.onmouseout = function(){document.getElementById('h1-GOG').style.color = gogColor}
     </script>
+    
+    <script>
+      function myMap(){
+        var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  }
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
   </body>
 </html>
