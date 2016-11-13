@@ -63,6 +63,15 @@ p{
     cursor: pointer;
 }
 
+#O-nama{
+	width: 1000px;
+}
+
+body{
+	background-image: -webkit-linear-gradient(#1ab2ff, #e6f7ff);
+	background-attachment: fixed;
+}
+
 #row-vesti, .container, .row{
 	margin: auto;
 }
@@ -94,6 +103,10 @@ p{
 	left: 75px;
 }
 
+#GOG-osoblje{
+	
+}
+
 #logo-GOG{
 	position: relative;
 	top: 10px;
@@ -102,3 +115,4 @@ p{
 	position: relative;
 	top: 10px;
 }
+
