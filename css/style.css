@@ -1,16 +1,27 @@
 .header {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background: #8E94E1;
+	background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(230,230,230));
 }
 
 .navbar.navbar-inverse{
-	background: #454EBD;
+	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
 	border-radius: 0px;
 	border-width: 0px;
+
+}
+
+#navbar a{
+	color:white;
+	size: 16px;
+	font-size: 16px
+}
+
+.navbar.navbar-inverse a{
+	color:white;
 }
 
 body{
-	background: white;
+	background: 
 }
 
 
