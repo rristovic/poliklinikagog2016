@@ -67,8 +67,12 @@ p{
 	width: 1000px;
 }
 
-.header{
-	
+*{
+	border-style: 
+}
+
+.div-Vesti{
+	width: 1000px;
 }
 
 body{
@@ -76,19 +80,8 @@ body{
 	background-attachment: fixed;
 }
 
-#row-vesti, .container, .row{
-	margin: auto;
-}
-
 #row-vesti{
-	width: 2000px;
-	padding-right: 50px;
-}
-
-#info-RVreme{
-	position: relative;
-	top: 20px;
-	right: 285px;
+	
 }
 
 #info{
@@ -121,7 +114,11 @@ body{
 	top: 10px;
 	background-image: -webkit-linear-gradient(#1ab2ff, #1ab2ff);
 	border-color: #007ab3;
+
 }
 
-
-
+#info-RVreme{
+	position: relative;
+	top: 20px;
+	right: 293px;
+}
