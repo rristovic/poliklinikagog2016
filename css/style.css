@@ -67,6 +67,10 @@ p{
 	width: 1000px;
 }
 
+.header{
+	
+}
+
 body{
 	background-image: -webkit-linear-gradient(#1ab2ff, #e6f7ff);
 	background-attachment: fixed;
@@ -99,7 +103,7 @@ body{
 
 #GOG{
 	position: relative;
-	bottom: 55px;
+	bottom: 50px;
 	left: 75px;
 }
 
@@ -110,9 +114,14 @@ body{
 #logo-GOG{
 	position: relative;
 	top: 10px;
+	right: 10px;
 }
 .navbar{
 	position: relative;
 	top: 10px;
+	background-image: -webkit-linear-gradient(#1ab2ff, #1ab2ff);
+	border-color: #007ab3;
 }
+
+
 
