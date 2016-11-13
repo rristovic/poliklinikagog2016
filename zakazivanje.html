@@ -9,10 +9,11 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-js.js"></script>
+  
   </head>
 
-  <body>
+  <body onload="setTestQuestion()">
+
   	<div class="container header">
   		<div class="row">
           	<div class="col-md-3">
@@ -47,43 +48,76 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-    <h1>Naša lokacija</h1>
-    <div id="map" style="width:600px;height:400px;background: blue"></div>
+    <section >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form action="#">
+              <p>Molimo Vas unesite Vase podatke. Obavezna polja su oznacena sa *.
+              <div class="form-group">
+                <label class="sr-only" for="email">Ime i prezime</label>
+                <input type="text" class="form-control" id="name" placeholder="Ime i prezime *" required="Obavezno polje">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="text">Kontakt telefon</label>
+                <input type="text" class="form-control" id="phonenum" placeholder="Kontakt telefon *" required="Obavezno polje">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="email">Email adresa</label>
+                <input type="email" class="form-control" id="email" placeholder="Imejl adresa">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="text">Komentar</label>
+                <textarea class="form-control" id="comment" placeholder="Vas komentar"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="text">Dokazite da niste robot</label>
+                <input type="number" class="form-control" id="test" placeholder="*" required="Obavezno polje"/>
+              </div>
+
+              <p>Date: <input type="text" id="date" size="8"></p>
+              <button type="button" onclick="submitClicked()" class="btn btn-default">Posalji</button>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <img src="img/demo1.jpg" class="demo">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
+            <a href="#" class="btn btn-default">Read More</a>
+          </div>   
+        </div>
       </div>
-      
-      <div class="col-md-9">
-      <p>Radno vreme</p>
-      </div>
-    </div>
+    </section>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
     	var gogColor = document.getElementById('h1-GOG').style.color;
     	var gogNewColor = "red";
     	var aGog = document.getElementById('a-GOG');
+      var inputTest, x, y;
 
     	aGog.onmouseover = function(){document.getElementById('h1-GOG').style.color = gogNewColor}
     	aGog.onmouseout = function(){document.getElementById('h1-GOG').style.color = gogColor}
-    </script>
-    
-    <script>
-      function myMap(){
-        var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.12),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.HYBRID
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  }
 
+      function submitClicked(){
+          if (inputTest.value != (x + y)){
+            window.alert("Uneli ste pogresan zbir!");
+            inputTest.value = "";
+            setTestQuestion();
+          }
+      }
+
+      function setTestQuestion(){
+        x = Math.floor((Math.random() * 10) + 1);
+        y = Math.floor((Math.random() * 10) + 1);
+        inputTest = document.getElementById('test');
+        inputTest.placeholder = "Unesite zbir brojeva " + x + " + " + y + " *";
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
   </body>
 </html>
