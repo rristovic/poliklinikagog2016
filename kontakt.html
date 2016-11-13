@@ -72,28 +72,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script type="text/javascript">
-    	var gogColor = document.getElementById('h1-GOG').style.color;
-    	var gogNewColor = "red";
-    	var aGog = document.getElementById('a-GOG');
-
-    	aGog.onmouseover = function(){document.getElementById('h1-GOG').style.color = gogNewColor}
-    	aGog.onmouseout = function(){document.getElementById('h1-GOG').style.color = gogColor}
-    </script>
-    
-    <script>
-      function initMap() {
-        var uluru = {lat: 44.791525, lng: 20.489902};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+    <script src="js/ui.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 
