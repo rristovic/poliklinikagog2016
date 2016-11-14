@@ -11,7 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="slider();">
     <div class="header">
       <div class="container">
         <div class="row">
@@ -63,7 +63,11 @@
     <div class="container">
 	    <div class="row" id="row-vesti">
 		 	<div class="col-md-6">
-		 		
+		 		<div class="slider">
+        <img id="1" src="assets/slider1.jpg" border="0"/>
+        <img id="2"src="assets/slider2.jpg" border="0">
+        <img id="3"src="assets/slider3.jpg" border="0">
+      </div>
         <div class="div-Vesti">
         <h2 id="vesti">VESTI</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit turpis, feugiat sed blandit vitae, laoreet vel orci. Donec sollicitudin enim eget nunc dignissim, vitae convallis ex tincidunt. Pellentesque vitae orci a velit pharetra consequat et ac neque. Phasellus aliquet est id pharetra hendrerit. Maecenas gravida lectus eu eros rutrum sagittis.</p>
@@ -83,13 +87,18 @@
         <a href="#" class="btn">Opsirnije</a>
         </div>
 		 	</div>
+      
 		</div> 
 	</div>
 
+  <div class="footer">
+    <p>Made by team #.</p>
+  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/ui.js"></script> 
   </body>

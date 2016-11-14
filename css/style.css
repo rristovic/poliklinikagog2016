@@ -3,6 +3,18 @@
 	background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(230,230,230));
 }
 
+.footer{
+	height: 50px;
+	width: 100%;
+	background-color: rgb(69,78,189);
+	margin-top: 20px;
+	color: white;
+}
+
+.footer p{
+	float: right;
+}
+
 .navbar{
 	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
 	border-radius: 0px;
@@ -23,11 +35,6 @@
 .dropdown-menu {
 	background: rgb(69,78,189);
 }
-
-body{
-	background: 
-}
-
 
 #a-GOG{
 	color: black;
@@ -72,8 +79,6 @@ p{
     }
 }
 
-
-
 .col-md-6{
 	text-align: center;
 	margin: auto;
@@ -91,24 +96,15 @@ p{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+
 }
 
 #O-nama{
 	width: 1000px;
 }
 
-*{
-	border-style: 
-}
-
 .div-Vesti{
 	width: 1000px;
-}
-
-
-
-#row-vesti{
-	
 }
 
 #info{
@@ -147,4 +143,21 @@ p{
 	color: white;
 	height: 400px;
 	overflow: none;
+}
+
+.slider{
+	width: 800px;
+	height: 500px;
+	overflow: hidden;
+	margin: 30px auto;
+	border-style: solid;
+	border-radius: 25px;
+	position: relative;
+	left: 100px;
+}
+
+.slider img{
+	width: 800px;
+	height: 500px;
+	display: none;
 }
