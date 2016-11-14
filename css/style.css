@@ -3,7 +3,7 @@
 	background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(230,230,230));
 }
 
-.navbar.navbar-inverse{
+.navbar{
 	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
 	border-radius: 0px;
 	border-width: 0px;
@@ -18,6 +18,10 @@
 
 .navbar.navbar-inverse a{
 	color:white;
+}
+
+.dropdown-menu {
+	background: rgb(69,78,189);
 }
 
 body{

@@ -17,6 +17,19 @@ $('#navbar a').hover(function(){
   }
 );
 
+var dropMenuItemBG;
+$(document).ready(function(){
+  dropMenuItemBG = $('.dropdown-menu').css('background');
+}); 
+$('.dropdown-menu a').hover(function(){
+  $(this).css('background','#151E8C');
+  },
+  function(){
+    $(this).css('background', dropMenuItemBG);
+  }
+);
+
+
 function initMap() {
         var uluru = {lat: 44.791525, lng: 20.489902};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,4 +40,6 @@ function initMap() {
           position: uluru,
           map: map
         });
-      }
+}
+
+w3IncludeHTML();
