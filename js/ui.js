@@ -62,3 +62,8 @@ function slider() {
     }
   }, 6500);
 }
+
+$(function() {
+  $("#datepicker").datepicker();
+});
+
