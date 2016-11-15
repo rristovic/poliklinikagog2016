@@ -1,9 +1,16 @@
-var gogColor = document.getElementById('h1-GOG').style.color;
 var gogNewColor = "red";
-var aGog = document.getElementById('a-GOG');
+var gogColor;
 
-aGog.onmouseover = function(){document.getElementById('h1-GOG').style.color = gogNewColor}
-aGog.onmouseout = function(){document.getElementById('h1-GOG').style.color = gogColor}
+$(document).ready(function(){
+  gogColor = $('#h1-GOG').css('color');
+});
+$('#a-GOG').hover(function(){
+  $('#h1-GOG').css('color', gogNewColor);
+  },
+  function(){
+    $('#h1-GOG').css('color', gogColor);
+  }
+);
 
 var menuItemBG;
 $(document).ready(function(){
@@ -41,8 +48,6 @@ function initMap() {
           map: map
         });
 }
-
-w3IncludeHTML();
 
 function slider() {
   $(".slider #1").show("fade", 500);

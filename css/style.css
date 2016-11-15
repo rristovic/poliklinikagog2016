@@ -1,56 +1,8 @@
+
+/* ============= HEADER ============== */ 
 .header {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(230,230,230));
-}
-
-.footer{
-	height: 100%;
-	background-color: rgb(69,78,189);
-	padding: 30px 0px;
-	color: white;
-}
-
-#datepicker{
-	font-size: 10px;
-}
-
-.footer p{
-	float: right;
-	position: relative;
-	right: 15px;
-
-}
-
-.navbar{
-	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
-	border-radius: 0px;
-	border-width: 0px;
-
-}
-
-#navbar a{
-	color:white;
-	size: 16px;
-	font-size: 16px
-}
-
-.navbar.navbar-inverse a{
-	color:white;
-}
-
-/* Forme na stranici zakazivanje */
-form {
-	padding: 1% 5% 0px 1%;
-	margin-bottom: 5%;
-}
-
-.dropdown-menu {
-	background: rgb(69,78,189);
-}
-
-#a-GOG{
-	color: black;
-	text-decoration: none;
 }
 
 .header p{
@@ -69,9 +21,50 @@ form {
 	margin-left: 5px
 }
 
-h1{
-	font-size: 4em;
+.navbar{
+	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
+	border-radius: 0px;
+	border-width: 0px;
+
 }
+
+#navbar a{
+	color:white;
+	size: 16px;
+	font-size: 16px
+}
+
+.navbar.navbar-inverse a{
+	color:white;
+}
+/* 	========================================
+	======================================== */ 
+
+
+#datepicker{
+	font-size: 10px;
+}
+
+/* Forme na stranici zakazivanje */
+form {
+	padding: 1% 5% 0px 1%;
+	margin-bottom: 5%;
+}
+
+.dropdown-menu {
+	background: rgb(69,78,189);
+}
+
+#a-GOG{
+	color: black;
+	text-decoration: none;
+}
+
+
+
+/*h1{
+	font-size: 4em;
+}*/
 
 h2{
 	color: #003399;
@@ -196,7 +189,21 @@ p{
 }
 
 body{
-	background-image: url("http://wallpapercave.com/wp/0mfq8TY.jpg");
+	background-image: url("background.jpg");
 	background-attachment: fixed;
 	background-size: 100%;
+}
+
+footer{
+	height: 100%;
+	background-color: rgb(69,78,189);
+	padding: 30px 0px;
+	color: white;
+}
+
+footer p{
+	float: right;
+	position: relative;
+	right: 15px;
+
 }
