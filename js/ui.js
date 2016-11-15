@@ -72,3 +72,5 @@ $(function() {
   $("#datepicker").datepicker();
 });
 
+document.body.style.zoom="100%";
+
