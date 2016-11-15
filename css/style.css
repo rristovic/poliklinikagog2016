@@ -10,15 +10,51 @@
 	text-align: center;
 	width: 33%;
 	float: left;
-	margin-top: 5px;
 }
 
 .header input{
+	width: 90%; 
+	height: 30px;
 	margin-top: 5px;
+	margin-bottom: 5px;
+	float: left; 
 }
-.header button{
+.header button.m {
+	width: 9%; 
+	height: 30px;
 	margin-top: 5px;
-	margin-left: 5px
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+.header h1.m{
+	margin-top: 15px;
+	font-size: 36px; 
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 978px) {
+    .service {
+      margin-top: 4%;
+    }
+
+    .header input{
+    	width: 100%;
+    }
+    .header button.m{
+    	display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header h1.m{
+    	font-size: 32px;
+    }
+
+    .header button.m{
+    	font-size: 12px;
+    }
 }
 
 .navbar{
@@ -94,11 +130,7 @@ p{
 	text-align: justify;
 }
 
-@media (max-width: 978px) {
-    .service {
-      margin-top: 4%;
-    }
-}
+
 
 .col-md-6{
 	text-align: center;
@@ -205,5 +237,4 @@ footer p{
 	float: right;
 	position: relative;
 	right: 15px;
-
 }

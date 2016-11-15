@@ -19,17 +19,17 @@
         <div class="row">
           <div class="col-md-4">
             <a href="index.html" id="a-GOG">
-              <h1 style="font-size: 36px; font-family: 'Trebuchet MS', sans-serif; margin-top: 15px; "><b>poliklinika<span id="h1-GOG">GOG</span>.com</b></h1>
+              <h1 class="m"><b>poliklinika<span id="h1-GOG">GOG</span>.com</b></h1>
             </a>
           </div>
 
           <div class="col-md-8">
                 <label class="sr-only" for="text">Pretrazi sajt</label>
-                <input type="text" class="form-control" id="search" placeholder="Pretrazi sajt" style="float: left; width: 90%; height: 30px">
-                <button type="button" class="btn-s btn-default" style="float: left; width: 9%; height: 30px">Pretrazi</button>
+                <input type="text" class="form-control" id="search" placeholder="Pretrazi sajt">
+                <button type="button" class="btn-m btn-default m">Pretrazi</button>
           </div>   
 
-          <div class="col-md-8">
+          <div class="col-md-8 hidden-xs">
             <p> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Kralja Vladimira 33</p>
             <p><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> pon-subota: 8h - 20h</p>
             <p style="border: none"><span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span> 063 / 123 - 1233</p>
@@ -76,7 +76,7 @@
             <h2>Molimo Vas unesite Vase podatke. Obavezna polja su oznacena sa *.</h2>
             </div>
           <div class="col-md-8">
-            <form action="#" >
+            <form >
               <div class="form-group">
                 <label class="sr-only" for="text">Ime i prezime</label>
                 <input type="text" class="form-control" id="name" placeholder="Ime i prezime *" required="Obavezno polje">
@@ -94,16 +94,28 @@
                 <textarea class="form-control" id="comment" placeholder="Vas komentar"></textarea>
               </div>
               <div class="form-group">
+                <label class="sr-only" for="text">Termin</label>
+                <input type="date" class="form-control" name="bday" placeholder="Termin *">
+              </div>
+              <div class="form-group">
                 <label class="sr-only" for="text">Dokazite da niste robot</label>
                 <input type="number" class="form-control" id="test" placeholder="*" required="Obavezno polje"/>
               </div>
-              <p>Date: <input type="text" id="date" size="8"></p>
-              <button type="button" onclick="submitClicked()" class="btn btn-default btn-block  ">Posalji</button>
+
+              <div style="float: left;">
+                <input type="radio" name="gender" value="male" checked required="Obavezno polje"> Muško<br>
+                <input type="radio" name="gender" value="female" required="Obavezno polje"> Žensko<br>
+              </div>
+              <div style="float: left; margin: 10px 0px 0px 50px">
+                <input type="checkbox" name="age" checked="true" required="Obavezno polje"> Imam preko 18 godina<br>
+              </div>
+              
+              <button type="submit" onclick="submitClicked()" class="btn btn-default btn-block  ">Posalji</button>
             </form>
           </div>
 
-          <div class="col-md-4">
-            <img src="assets/doctor.jpg" width="100%" height="360px" alt="Doktor">
+          <div class="col-md-4 hidden-xs" style="margin-top: 25px; text-align: center;">
+            <img id="doctor-image" src="assets/doctor.jpg" width="400px" height="400px" alt="Doktor">
           </div>
 
           <div class="col-md-6">
@@ -134,15 +146,30 @@
     <script type="text/javascript">
 
       function submitClicked(){
-          if (inputTest.value != (x + y)){
-            window.alert("Uneli ste pogresan zbir!");
-            inputTest.value = "";
-            setTestQuestion();
-          } else {
-             var url = location.href;               //Save down the URL without hash.
-              location.href = "#"+'textAfterSumbit';  
-            window.alert("Uspesno ste poslali zahtev za pregled, odgovor cete dobiti na email!");
-          }
+        var input = document.getElementById('name');
+        if(input.value == ""){
+          window.alert("Polje ime ne sme biti prazno!");
+          input.focus();
+          return;
+        }
+
+        input = document.getElementById('phonenum');
+        if(input.value == ""){
+          window.alert("Polje telefon ne sme biti prazno!");
+          input.focus();
+          return;
+        }
+
+        if (inputTest.value != (x + y)){
+          window.alert("Uneli ste pogresan zbir!");
+          inputTest.value = "";
+          inputTest.focus();
+          setTestQuestion();
+        } else {
+          var url = location.href;               //Save down the URL without hash.
+          location.href = "#"+'textAfterSumbit';  
+          window.alert("Uspesno ste poslali zahtev za pregled, odgovor cete dobiti na email!");
+        }
       }
 
       function setTestQuestion(){
