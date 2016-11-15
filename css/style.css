@@ -136,7 +136,15 @@ p{
 	text-align: center;
 	margin: auto;
 }
-
+.col-md-4{
+	text-align:center;
+	padding: 20px 15px 20px 15px;
+}
+.col-md-3{
+	text-align: left;
+	width: 80%;
+	height:50%;
+}
 .btn{
 	background-color: lightblue;
     border: none;
@@ -152,20 +160,29 @@ p{
 
 }
 
-#O-nama{
-
-	width: 1000px;
+#p1{
+	padding-top: 50px;
+	background:none;
+	letter-spacing: 1px;
+	font-style: italic;
+	font-family: "arial";
 }
-#zaposleni img{
+#O-nama img{
 	width:350px;
 	height:350px;
-	padding:10px 15px 10px 15px;
-	text-align: left;
-
-	
+	float: left;
 }
-#zaposleni li{
-	
+#O-nama p{
+	padding:50px 10px 50px 10px;
+	letter-spacing: 1px;
+	font-style: italic;
+	font-style:"arial";
+}
+#vizijaimisija p{
+	background:none;
+	font-style: italic;
+	font-family: "arial";
+	letter-spacing: 1px;
 }
 
 .div-Vesti{
@@ -186,10 +203,6 @@ p{
 	position: relative;
 	bottom: 50px;
 	left: 75px;
-}
-
-#GOG-osoblje{
-	
 }
 
 #logo-GOG{
