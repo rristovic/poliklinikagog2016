@@ -131,6 +131,10 @@ p{
 .service button{
 	background: #f0ad4e	;
 	margin-left: 0px;
+	margin-bottom: 0px;
+}
+.service .list-group{
+	margin-bottom: 0px;
 }
 
 .col-md-6{
