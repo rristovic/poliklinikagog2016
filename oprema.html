@@ -11,19 +11,18 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
-
+  <body onload="slider();">
     <div class="header">
-    	<div class="container">
-    		<div class="row">
+      <div class="container">
+        <div class="row">
           <div class="col-md-3">
-  	  			<a href="index.html" id="a-GOG">
-  	  				<h1>poliklinika<span id="h1-GOG">GOG</span>.com</h1>
-  	  			</a>
-    			</div>
-    			
-    		</div>
-    	</div>
+            <a href="index.html" id="a-GOG">
+              <h1>poliklinika<span id="h1-GOG">GOG</span>.com</h1>
+            </a>
+          </div>
+          
+        </div>
+      </div>
 
       <nav class="navbar navbar-inverse fixed-top">
         <div class="container">
@@ -39,7 +38,7 @@
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="usluge.html">Usluge</a></li>
-                <li>
+              <li>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">O nama<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="zaposleni.html">Zaposleni</a></li>
@@ -55,35 +54,31 @@
           </div><!--/.nav-collapse -->
         </div>
       </nav>
+
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12" id="map"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <h3>Kontakt podaci</h3>
-          <b>Adresa:</b> Lorem Ipsum
-            <br>
-          <b>Telefon:</b> Lorem Ipsum
-            <br>
-          <b>Radno vreme:</b> Lorem Ipsum
-        </div>
-      </div>
-    </div>
-  
+      <div class="row" id="row-oprema">
+      <div class="col-md-3">
 
-    <div class="footer">
-    <p>Made by team #.</p></div>
+      <div class="div-Oprema">
+      <h2 id="misija">Oprema</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit turpis, feugiat sed blandit vitae, laoreet vel orci. Donec sollicitudin enim eget nunc dignissim, vitae convallis ex tincidunt. Pellentesque vitae orci a velit pharetra consequat et ac neque. Phasellus aliquet est id pharetra hendrerit. Maecenas gravida lectus eu eros rutrum sagittis.</p>
+      </div>
+      
+      </div>
+      </div>
+      </div>
+
+  <div class="footer">
+    <p>Made by team #.</p>
+  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/ui.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-
+    <script src="js/ui.js"></script> 
   </body>
 </html>
