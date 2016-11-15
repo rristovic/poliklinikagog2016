@@ -53,9 +53,11 @@
     <section >
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <form action="#">
-              <p>Molimo Vas unesite Vase podatke. Obavezna polja su oznacena sa *.
+           <div class="col-md-12">
+            <h2>Molimo Vas unesite Vase podatke. Obavezna polja su oznacena sa *.</h2>
+            </div>
+          <div class="col-md-8">
+            <form action="#" >
               <div class="form-group">
                 <label class="sr-only" for="text">Ime i prezime</label>
                 <input type="text" class="form-control" id="name" placeholder="Ime i prezime *" required="Obavezno polje">
@@ -76,17 +78,26 @@
                 <label class="sr-only" for="text">Dokazite da niste robot</label>
                 <input type="number" class="form-control" id="test" placeholder="*" required="Obavezno polje"/>
               </div>
-
               <p>Date: <input type="text" id="date" size="8"></p>
-              <button type="button" onclick="submitClicked()" class="btn btn-default">Posalji</button>
+              <button type="button" onclick="submitClicked()" class="btn btn-default btn-block  ">Posalji</button
             </form>
           </div>
 
+          <div class="col-md-4">
+            <img src="assets/doctor.jpg" width="100%" height="360px" alt="Doktor">
+          </div>
+
           <div class="col-md-6">
-            <img src="img/demo1.jpg" class="demo">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
-            <a href="#" class="btn btn-default">Read More</a>
+            <h4 id="textAfterSumbit">Poštovani, bićete pozvani u najskorijem roku!</h4>
+            <p> Hvala Vam što ste sa nama. Unapredili smo našu komunikaciju i znatno olakšali način na koji možete da zakažete željeni pregled. Pratite naše sajtove u narednom periodu i bićete u prilici da na mnogo kvalitetniji način budete usluženi. Za hitne preglede ili vremenski neodložne preglede postoji mogućnost, nakon dogovora, zakazivanje pregleda i neradnim danima, subotom popodne, nedeljom, praznicima. Takođe sve što Vas zanima možete pitati i putem e-maila kontakt@poliklinikagog.com na koji će Vam naši hirurzi specijalisti sa zadovoljstvom odgovoriti.
+
+</p>
+          </div> 
+          <div class="col-md-6">
+            <h4>Šta da uradim ako želim da otkažem pregled?</h4>
+            <p>Ako, iz bilo kog razloga, u međuvremenu odlučite da promenite termin dolaska kod lekara, dovoljno je da ponovo pozovete Call centar - 021/4879-000, otkažete pregled i dogovorite se za novi termin.</p>
+            <h4>Šta ako se lekar razboli?</h4>
+            <p>Ako iz bilo kog razloga dođe do promene u radnom vremenu lekara, medicinska sestra koja radi sa njim u timu će vas pozvati i ponuditi vam prvi slobodan termin ili pregled kod nekog od kolega koji će ga menjati.</p>
           </div>   
         </div>
       </div>
@@ -102,11 +113,15 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/ui.js"></script>
     <script type="text/javascript">
+
       function submitClicked(){
           if (inputTest.value != (x + y)){
             window.alert("Uneli ste pogresan zbir!");
             inputTest.value = "";
             setTestQuestion();
+          } else {
+             var url = location.href;               //Save down the URL without hash.
+              location.href = "#"+'textAfterSumbit';  
           }
       }
 

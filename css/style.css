@@ -32,6 +32,12 @@
 	color:white;
 }
 
+/* Forme na stranici zakazivanje */
+form {
+	padding: 1% 5% 0px 1%;
+	margin-bottom: 5%;
+}
+
 .dropdown-menu {
 	background: rgb(69,78,189);
 }
@@ -70,7 +76,7 @@ h2{
 }
 
 p{
-	text-align: left;
+	text-align: justify;
 	/*line-height: 40px;
 	font-size: 20px;*/
 }
