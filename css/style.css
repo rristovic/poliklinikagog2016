@@ -130,8 +130,6 @@ p{
 	text-align: justify;
 }
 
-
-
 .col-md-6{
 	text-align: center;
 	margin: auto;
@@ -142,8 +140,14 @@ p{
 
 .col-md-3{
 	text-align: left;
-	width: 80%;
+	width: 75%;
 	height:50%;
+	float:left;
+}
+#goglogo{
+	float:right;
+	width:25%;
+	height: 50%;
 }
 .btn{
 	background-color: lightblue;
@@ -158,6 +162,14 @@ p{
     margin: 4px 2px;
     cursor: pointer;
 
+}
+#vizija{
+	font-family: arial;
+	font-style: italic;
+}
+#misija{
+	font-family: arial;
+	font-style: italic;
 }
 
 #tekstovi{
