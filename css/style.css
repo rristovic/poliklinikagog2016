@@ -34,11 +34,33 @@
 	font-family: 'Trebuchet MS', sans-serif;
 }
 
-@media (max-width: 978px) {
-    .service {
-      margin-top: 4%;
-    }
+.navbar{
+	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
+	border-radius: 0px;
+	border-width: 0px;
 
+}
+
+#navbar a{
+	color:white;
+	size: 16px;
+	font-size: 16px
+}
+
+.navbar.navbar-inverse a{
+	color:white;
+}
+
+#a-GOG{
+	color: black;
+	text-decoration: none;
+}
+
+.dropdown-menu {
+	background: rgb(69,78,189);
+}
+
+@media (max-width: 978px) {
     .header input{
     	width: 100%;
     }
@@ -56,23 +78,6 @@
     	font-size: 12px;
     }
 }
-
-.navbar{
-	background:-webkit-linear-gradient(rgb(80, 90, 200), rgb(69,78,189));
-	border-radius: 0px;
-	border-width: 0px;
-
-}
-
-#navbar a{
-	color:white;
-	size: 16px;
-	font-size: 16px
-}
-
-.navbar.navbar-inverse a{
-	color:white;
-}
 /* 	========================================
 	======================================== */ 
 
@@ -87,20 +92,9 @@ form {
 	margin-bottom: 5%;
 }
 
-.dropdown-menu {
-	background: rgb(69,78,189);
-}
-
-#a-GOG{
-	color: black;
-	text-decoration: none;
-}
 
 
 
-/*h1{
-	font-size: 4em;
-}*/
 
 h2{
 	color: #003399;
@@ -118,9 +112,13 @@ p{
 
 
 .service {
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 7%;
+	margin-right: 7%;
+	margin-bottom: 15px;
+	padding: 5px;
 	text-align: center;
+	border: 1px darkgrey solid;
+	border-radius: 2px
 	/*border: 0.5px solid lightgrey;
     border-radius: 5px;
 	padding: 5px;*/
@@ -128,6 +126,11 @@ p{
 
 .service_p {
 	text-align: justify;
+}
+
+.service button{
+	background: #f0ad4e	;
+	margin-left: 0px;
 }
 
 .col-md-6{
@@ -149,6 +152,7 @@ p{
 	width:25%;
 	height: 50%;
 }
+
 .btn{
 	background-color: lightblue;
     border: none;
@@ -266,8 +270,9 @@ body{
 
 footer{
 	height: 100%;
-	background-color: rgb(69,78,189);
 	padding: 30px 0px;
+	margin-top: 15px;
+	background-color: rgb(69,78,189);
 	color: white;
 }
 
