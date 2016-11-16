@@ -156,7 +156,12 @@ p{
 	width:25%;
 	height: 50%;
 }
-
+#oprema{
+	font-style: italic;
+	font-style: arial;
+	letter-spacing: 1px;
+	width:70%;
+}
 .btn{
 	background-color: lightblue;
     border: none;
@@ -193,11 +198,41 @@ p{
 	float: left;
 	padding:20px 10px 5px 10px;
 }
+div.gal{
+	margin-top:80px;
+	max-height: 1100px;
+	max-width: 1300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+@media (max-width: 400px){
+	#O-nama img{
+		width: 100%;
+	}
+
+}
+@media(max-height: 300px){
+	#O-nama img{
+		height: 100%;
+	}
+}
 #O-nama p{
 	padding:40px 10px 30px 10px;
 	letter-spacing: 1px;
 	font-style: italic;
 	font-style:"arial";
+}
+#opremaOPREMA{
+	background: none;
+	width: 50%;
+	font-style: italic;
+	font-family: arial;
+}
+#primarniplan{
+	width:50%;
+	font-style: italic;
+	font-family: arial;
+	padding: 0 10px 15px 10px;
 }
 #vizijaimisija p{
 	background:none;
@@ -205,7 +240,13 @@ p{
 	font-family: "arial";
 	letter-spacing: 1px;
 }
-
+#middle img{
+	width: 350px;
+	height: 300px;
+	padding: 1px;
+	margin:0 10px 10px 0;
+	border:4px solid #555;
+}
 .div-Vesti{
 	width: 1000px;
 }
