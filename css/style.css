@@ -205,6 +205,7 @@ form {
 #misija{
 	font-family: arial;
 	font-style: italic;
+
 }
 
 #tekstovi{
@@ -213,12 +214,14 @@ form {
 	letter-spacing: 1px;
 	font-style: italic;
 	font-family: "arial";
+
 }
 #O-nama img{
 	width:350px;
 	height:350px;
 	float: left;
 	padding:20px 10px 5px 10px;
+
 }
 div.gal{
 	margin-top:80px;
@@ -244,6 +247,13 @@ div.gal{
 	font-style: italic;
 	font-style:"arial";
 }
+#menadzment img{
+	width:400px;
+	height: 400px;
+	padding:20px 20px 10px 20px;
+	margin: 3px 3px 3px 3px;
+	
+}
 #opremaOPREMA{
 	background: none;
 	width: 50%;
@@ -262,6 +272,7 @@ div.gal{
 	font-style: italic;
 	font-family: "arial";
 	letter-spacing: 1px;
+	
 }
 #middle img{
 	width: 350px;
@@ -313,6 +324,7 @@ div.gal{
 }
 .col-md-4{
 	text-align:center;
+
 }
 
 body{
