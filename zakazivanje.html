@@ -12,7 +12,7 @@
   
   </head>
 
-  <body onload="setTestQuestion()" style="background: white">
+  <body  style="background: white">
 
   	<div class="header">
       <div class="container">
@@ -76,10 +76,10 @@
             <h2>Molimo Vas unesite Vase podatke. Obavezna polja su oznacena sa *.</h2>
             </div>
           <div class="col-md-8">
-            <form >
+            <form id="zakazivanjeForm">
               <div class="form-group">
                 <label class="sr-only" for="text">Ime i prezime</label>
-                <input type="text" class="form-control" id="name" placeholder="Ime i prezime *" required="Obavezno polje">
+                <input type="text" class="form-control" id="name" placeholder="Ime i prezime *" name="ime" required="Obavezno polje">
               </div>
               <div class="form-group">
                 <label class="sr-only" for="text">Kontakt telefon</label>
@@ -99,7 +99,8 @@
               </div>
               <div class="form-group">
                 <label class="sr-only" for="text">Dokazite da niste robot</label>
-                <input type="number" class="form-control" id="test" placeholder="*" required="Obavezno polje"/>
+                <input type="number" class="form-control" id="test" name="test" required="Obavezno polje"/>
+                <input type="hidden" id="test-value"/>
               </div>
 
               <div style="float: left;">
@@ -110,7 +111,7 @@
                 <input type="checkbox" name="age" checked="true" required="Obavezno polje"> Imam preko 18 godina<br>
               </div>
               
-              <button type="submit" onclick="submitClicked()" class="btn btn-default btn-block  ">Posalji</button>
+              <button type="submit" class="btn btn-default btn-block  ">Posalji</button>
             </form>
           </div>
 
@@ -143,41 +144,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/ui.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script type="text/javascript">
 
-      function submitClicked(){
-        var input = document.getElementById('name');
-        if(input.value == ""){
-          window.alert("Polje ime ne sme biti prazno!");
-          input.focus();
-          return;
-        }
+    var x = Math.floor((Math.random() * 10) + 1);
+    var y = Math.floor((Math.random() * 10) + 1);
 
-        input = document.getElementById('phonenum');
-        if(input.value == ""){
-          window.alert("Polje telefon ne sme biti prazno!");
-          input.focus();
-          return;
-        }
+jQuery.extend(jQuery.validator.messages, {
+    required: "Ovo polje je obavezno.",
+    digits: "Dozvoljeni su samo brojevi.",
+    minlength: jQuery.validator.format("Ovo polje je suviše kratko."),
+    rangelength: jQuery.validator.format("Molimo Vas unesite između {0} i {1} karaktera."),
+    equalTo: "Molimo vas unesite tačan zbir."
+});
 
-        if (inputTest.value != (x + y)){
-          window.alert("Uneli ste pogresan zbir!");
-          inputTest.value = "";
-          inputTest.focus();
-          setTestQuestion();
-        } else {
-          var url = location.href;               //Save down the URL without hash.
-          location.href = "#"+'textAfterSumbit';  
-          window.alert("Uspesno ste poslali zahtev za pregled, odgovor cete dobiti na email!");
+$('#zakazivanjeForm').validate({ // initialize the plugin
+    rules: {
+        ime: {
+            required: true,
+            minlength: 5
+        },
+        test:{
+          equalTo:  "#test-value"
         }
-      }
+    }
+});
 
-      function setTestQuestion(){
-        x = Math.floor((Math.random() * 10) + 1);
-        y = Math.floor((Math.random() * 10) + 1);
-        inputTest = document.getElementById('test');
-        inputTest.placeholder = "Unesite zbir brojeva " + x + " + " + y + " *";
-      }
+$("#zakazivanjeForm").submit(function(e) {
+  if($(this).valid()) {
+    var url = location.href;               //Save down the URL without hash.
+    location.href = "#"+'textAfterSumbit';  
+    window.alert("Uspesno ste poslali zahtev za pregled, odgovor cete dobiti na email!");
+  }
+  
+  e.preventDefault();
+});
+
+  document.getElementById("test-value").value=x+y;
+  document.getElementById("test").placeholder="Koliko je " + x +" + " +y;  
     </script>
   </body>
 </html>
