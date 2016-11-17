@@ -249,6 +249,11 @@ div.gal{
 }
 .div-Vesti{
 	width: 1000px;
+	font-family: arial;
+	font-style: italic;
+}
+.div-Vesti h2:hover{
+	color: red;
 }
 
 #info{
