@@ -84,11 +84,15 @@
 /* ====== Index =================
 ===============================*/
 .slider{
-	margin-left: 15%;
-	margin-right: 15%;
+	width: 90%;
+	height: 500px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
 	overflow: hidden;
 	border-style: solid;
 	border-radius: 25px;
+	padding: 0% !important;
 }
 
 
@@ -105,15 +109,13 @@
 
 @media (max-width: 978px){
 	.slider{
-		margin-left: 10%;
-		margin-right: 10%;
+		height: 400px;
 	}
 }
 
 @media (max-width: 720px){
 	.slider{
-		margin-left: 5%;
-		margin-right: 5%;
+		height: 300px;
 	}
 }
 
